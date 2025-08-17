@@ -1,0 +1,31 @@
+# Day 2 - Marks Percentage & Grade Calculator
+
+# Step 1: Take input
+marks = []
+for i in range(1, 6):
+    score = int(input(f"Enter marks in Subject {i}: "))
+    marks.append(score)
+
+# Step 2: Calculate total and percentage
+total = sum(marks)
+percentage = total / 5
+
+# Step 3: Assign grade
+if percentage >= 90:
+    grade = "A"
+elif percentage >= 75:
+    grade = "B"
+elif percentage >= 50:
+    grade = "C"
+else:
+    grade = "Fail"
+
+# Step 4: Print results
+print(f"\nTotal Marks: {total}")
+print(f"Percentage: {percentage:.2f}%")
+print(f"Grade: {grade}")
+
+# Step 5: Extra Challenge (floor division & modulus)
+tens = total // 10
+remainder = total % 10
+print(f"You scored {tens} full tens and {remainder} remaining marks in total.")
